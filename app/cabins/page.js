@@ -1,6 +1,7 @@
 import CabinList from '@/app/_components/CabinList';
 import { Suspense } from 'react';
 import Spinner from '@/app/_components/Spinner';
+import Filter from '../_components/Filter';
 
 // export const revalidate = 15;
 export const revalidate = 3600;
@@ -9,8 +10,11 @@ export const metadata = {
   title: 'Cabins',
 };
 
-export default function Page({ searchParams }) {
-  const filter = searchParams?.capacity ?? 'all';
+// export default function Page({ searchParams }) {
+export default function Page() {
+  // const filter = searchParams?.capacity ?? 'all';
+  // console.log(searchParams);
+  const filter = 'all';
 
   return (
     <div>
@@ -20,11 +24,15 @@ export default function Page({ searchParams }) {
       <p className='text-primary-200 text-lg mb-10'>
         Cozy yet luxurious cabins, located right in the heart of the Italian
         Dolomites. Imagine waking up to beautiful mountain views, spending your
-        days exploring the dark forests around, or just relaxing in your private
-        hot tub under the stars. Enjoy nature is beauty in your own little home
-        away from home. The perfect spot for a peaceful, calm vacation. Welcome
-        to paradise.
+        days exploring the dark forests arou nd, or just relaxing in your
+        private hot tub under the stars. Enjoy nature is beauty in your own
+        little home away from home. The perfect spot for a peaceful, calm
+        vacation. Welcome to paradise.
       </p>
+
+      <div className='flex justify-end mb-8'>
+        <Filter />
+      </div>
 
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinList filter={filter} />
