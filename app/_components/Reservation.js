@@ -4,14 +4,14 @@ import ReservationForm from './ReservationForm';
 
 async function Reservation({ cabin }) {
   const [settings, bookedDates] = await Promise.all([
-    getSettings(),
+    // getSettings(),
     getBookedDatesByCabinId(cabin.id),
   ]);
 
   return (
     <div className='border border-x-primary-800 min-h-[400px]'>
       <DateSelector
-        settings={settings}
+        // settings={settings}
         bookedDates={bookedDates}
         cabin={cabin}
       />
