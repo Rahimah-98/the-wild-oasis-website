@@ -1,1 +1,0 @@
-{"version":3,"sources":["page.js"],"names":["Page"],"mappings":";;;;;;;AAAe,SAASA,IAAT,GAAgB;AAC3B;AACH","sourcesContent":["export default function Page() {\r\n    return\r\n}"],"file":"page.dev.js"}

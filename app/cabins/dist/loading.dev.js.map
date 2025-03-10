@@ -1,1 +1,0 @@
-{"version":3,"sources":["loading.js"],"names":["Loading"],"mappings":";;;;;;;AAAA;;;;AAEe,SAASA,OAAT,GAAmB;AAChC;AACD","sourcesContent":["import Spinner from '@/app/_components/Spinner';\r\n\r\nexport default function Loading() {\r\n  return \r\n}\r\n"],"file":"loading.dev.js"}
